@@ -1,11 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/global.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+    <!-- Información principal -->
+    <div class="col-span-2 row-span-3 bg-white p-4 rounded-lg shadow-md">
+      <h1 class="text-2xl font-bold text-green-700">
+        Universidad Nacional Agraria de la Selva (UNAS)
+      </h1>
+      <p class="mt-2 text-gray-700">
+        La Universidad Nacional Agraria de la Selva (UNAS) es una institución
+        pública de educación superior ubicada en Tingo María, Perú. Fundada el
+        17 de febrero de 1964, se especializa en la formación de profesionales
+        en áreas como ingeniería, ciencias económicas y zootecnia, con un
+        enfoque en el desarrollo sostenible y la responsabilidad social.
+      </p>
+      <p class="mt-2 text-gray-700">
+        La universidad cuenta con ocho facultades y doce carreras profesionales,
+        atendiendo a más de 2,900 estudiantes. Entre sus instalaciones
+        destacadas se encuentra un jardín botánico de cinco hectáreas, que
+        alberga más de 1,500 especies de plantas tropicales amazónicas,
+        contribuyendo a la investigación y conservación de la biodiversidad
+        regional.
+      </p>
+    </div>
+
+    <!-- Enlaces útiles -->
+    <div class="col-span-1 row-span-1 bg-white p-4 rounded-lg shadow-md">
+      <h2 class="text-lg font-bold text-gray-800">Sitio Web</h2>
+      <a
+        href="https://portalweb.unas.edu.pe/"
+        target="_blank"
+        class="text-blue-600 underline hover:text-blue-800"
+      >
+        Visitar sitio oficial
+      </a>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="col-span-1 row-span-1 bg-white p-4 rounded-lg shadow-md">
+      <h2 class="text-lg font-bold text-gray-800">Redes sociales</h2>
+      <a
+        href="https://www.facebook.com/unas.edu.pe"
+        target="_blank"
+        class="flex items-center gap-2 text-blue-600 underline hover:text-blue-800"
+      >
+        <i class="fa-brands fa-facebook text-xl"></i> Facebook
+      </a>
+    </div>
+  </div>
 </Layout>
