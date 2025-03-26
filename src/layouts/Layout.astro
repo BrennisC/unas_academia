@@ -3,7 +3,7 @@ import Flooter from "@/components/Flooter.astro";
 import Hero from "@/components/Hero.astro";
 import "@/styles/global.css";
 
-const title = "UNAS Examenes";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +18,7 @@ const title = "UNAS Examenes";
   <body class="w-full min-h-screen bg-slate-100 text-slate-900 font-sans">
     <Hero />
     <div class="bg-slate-400 text-white p-10 mt-10">
-      <slot />
+      <slot title="Exams" />
     </div>
     <Flooter />
   </body>

@@ -1,0 +1,20 @@
+---
+import { typesExams } from "@/data/exams.ts";
+import Layout from "@/layouts/Layout.astro";
+export async function getStaticPaths() {
+  return typesExams.map((exam) => ({
+    params: { id: exam.id }, // 🔹 Recibimos el ID como string
+    props: { exam }, // 🔹 Pasamos el examen completo a la página
+  }));
+}
+
+const { id } = Astro.params;
+const { exam } = Astro.props;
+---
+
+<Layout>
+  <h1>Exams</h1>
+  <p>Here you can find all the exams</p>
+  <h2>Selected Exam: {exam.name}</h2>
+  <!-- 🔹 Mostrar el nombre del examen -->
+</Layout>

@@ -1,8 +1,20 @@
 ---
+import { typesExams } from "@/data/exams.ts";
 import Layout from "@/layouts/Layout.astro";
+
+const title = "Exámenes";
 ---
 
-<Layout>
+<Layout title={title}>
   <h1>Exams</h1>
   <p>Here you can find all the exams</p>
+  {
+    typesExams.map((examen) => (
+      <div>
+        <a href={`/exams/${examen.id}`}>
+          <h2>{examen.name}</h2>
+        </a>
+      </div>
+    ))
+  }
 </Layout>

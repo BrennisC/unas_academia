@@ -7,8 +7,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
-
-    // pages: {
-
-
+    site: 'https://astronaut.github.io',
+    base: 'mi-repo',
 });
